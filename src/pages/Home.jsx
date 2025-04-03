@@ -1,14 +1,14 @@
+/* eslint-disable simple-import-sort/imports */
 import { Link } from "react-router-dom";
 import Appcard from "../components/AppCard";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
     <>
-      <div className="flex min-h-screen w-full flex-col items-center justify-center gap-y-3">
-        <h1 className="text-3xl font-bold">Home Page...!</h1>
-
+      <div className="flex min-h-screen flex-col pt-10">
+        <Navbar />
         <Appcard />
-
         <Link to={"/"}>Go to login</Link>
       </div>
     </>

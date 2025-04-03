@@ -1,3 +1,4 @@
+/* eslint-disable simple-import-sort/imports */
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaCircleCheck } from "react-icons/fa6";
@@ -68,12 +69,12 @@ export default function Login() {
     };
   };
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-b from-gray-200 to-indigo-500 p-4">
+    <div className="flex min-h-screen flex-col bg-gradient-to-b from-gray-200 to-indigo-600 pt-10">
       {/* Header */}
       <Navbar />
 
       {/* Main Content */}
-      <div className="max-w-10xl flex w-full flex-col items-center justify-center gap-[60px] lg:flex-row">
+      <div className="max-w-10xl p-16 flex w-full flex-col items-center justify-center gap-[60px] lg:flex-row">
         {/* Left Section - About */}
         <div className="w-full justify-center lg:w-1/2 lg:text-left">
           <p className="text-lg font-medium leading-relaxed text-gray-800">
@@ -127,7 +128,7 @@ export default function Login() {
               onChange={(e) => validateLoginId(e)}
               type="text"
               placeholder="Enter user ID"
-              // className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+             
               className={`border ${
                 loginId.length < 4
                   ? "border-gray-400"
@@ -155,7 +156,7 @@ export default function Login() {
           <div className="mb-3 flex flex-col gap-y-1">
             <label
               htmlFor="password"
-              //className="block font-medium text-gray-700"
+              
               className="ml-1 w-max text-sm font-semibold opacity-80"
             >
               Password
@@ -180,7 +181,7 @@ export default function Login() {
                       : "border-red-500 focus-visible:ring-red-100"
                 } bg-background ring-offset-background placeholder:text-muted-foreground my-1 flex h-9 w-full rounded-md px-3 py-2 text-base font-medium opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm`}
                 placeholder="Enter password"
-                // className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                
               />
               <button
                 type="button"
@@ -205,6 +206,7 @@ export default function Login() {
             Login
           </button>
         </div>
+       
         {/* <LoginForm/> */}
       </div>
 
@@ -214,3 +216,5 @@ export default function Login() {
     </div>
   );
 }
+
+
