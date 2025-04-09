@@ -6,7 +6,6 @@ import { ImSpinner2 } from "react-icons/im";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
 const API_BASE_URL = "http://192.168.0.224:8082";
 
 const CandidateTable = () => {
@@ -47,7 +46,6 @@ const CandidateTable = () => {
     navigate(`/candidates/edit/${candidate.sNo}`);
   };
 
-
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="rounded-lg bg-white p-6 shadow-md">
@@ -60,7 +58,7 @@ const CandidateTable = () => {
           <h2 className="text-2xl font-semibold text-gray-800">
             Candidates List
           </h2>
-
+          {/* <button>Export CSV</button> */}
           <Link
             className="flex items-center rounded bg-green-500 px-2 py-2 text-white"
             to="/candidates/add"
@@ -121,9 +119,9 @@ const CandidateTable = () => {
               </tr>
             </thead>
             <tbody>
-              {candidates.map((candidate) => (
+              {candidates.map((candidate, i) => (
                 <tr key={candidate.id} className="border">
-                  <td className="px-4 py-2">{candidate.sNo}</td>
+                  <td className="px-4 py-2">{i + 1}</td>
                   <td className="px-4 py-2">{candidate.mode}</td>
                   <td className="px-4 py-2">{candidate.name}</td>
                   <td className="px-4 py-2">{candidate.skill}</td>
